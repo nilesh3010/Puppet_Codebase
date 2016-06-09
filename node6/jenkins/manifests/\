@@ -1,0 +1,12 @@
+class jenkins {
+exec{'jenkins-1.656-1.1.noarch.rpm':
+path => ['/usr/bin','/usr/sbin'],
+#provider => 'rpm',
+#name => 'jenkins-1.656-1.1.noarch.rpm',
+#source => 'puppet:///modules/jenkins/jenkins-1.656-1.1.noarch.rpm',
+#ensure => 'present',
+#require => File["/etc/puppet/modules/jenkins/files/jenkins-1.656-1.1.noarch.rpm"],
+#path => ['/usr/bin','/usr/sbin'],
+command => 'rpm -ivh puppet:///jenkins-1.656-1.1.noarch.rpm',
+}
+}
